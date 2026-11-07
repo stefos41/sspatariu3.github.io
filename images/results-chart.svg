@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="Results chart comparing three metrics before and after the project (placeholder values)">
+  <!-- Placeholder results chart. Rename the metrics, then change each bar's height and y
+       (baseline is y=320, so a bar of height H starts at y=320-H; max height 220). -->
+  <style>
+    .bg { fill: #ffffff; }
+    .title { fill: #003057; }
+    .muted { fill: #556274; }
+    .axis { stroke: #c3ccd9; }
+    .grid { stroke: #e1e5eb; }
+    .label { fill: #1a2433; }
+    .before { fill: #9aa8bb; }
+    .after { fill: #b3a369; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #121c2c; }
+      .title { fill: #f2f5f9; }
+      .muted { fill: #9aa8bb; }
+      .axis { stroke: #3a4c66; }
+      .grid { stroke: #243349; }
+      .label { fill: #dfe6ef; }
+      .before { fill: #4a5d7a; }
+      .after { fill: #c9b97d; }
+    }
+    text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect class="bg" width="760" height="400"/>
+  <text class="title" x="40" y="44" font-size="20" font-weight="700">Results</text>
+  <text class="muted" x="40" y="68" font-size="13">(edit metrics and values)</text>
+
+  <!-- legend -->
+  <rect class="before" x="520" y="34" width="14" height="14" rx="3"/>
+  <text class="label" x="542" y="46" font-size="13">Before</text>
+  <rect class="after" x="610" y="34" width="14" height="14" rx="3"/>
+  <text class="label" x="632" y="46" font-size="13">After</text>
+
+  <!-- gridlines -->
+  <g class="grid" stroke-width="1" stroke-dasharray="3 4">
+    <path d="M90 100h630M90 155h630M90 210h630M90 265h630"/>
+  </g>
+  <path class="axis" d="M90 320h630" stroke-width="2"/>
+
+  <!-- Metric 1 -->
+  <rect class="before" x="140" y="210" width="56" height="110" rx="6"/>
+  <rect class="after" x="206" y="140" width="56" height="180" rx="6"/>
+  <!-- Metric 2 -->
+  <rect class="before" x="350" y="180" width="56" height="140" rx="6"/>
+  <rect class="after" x="416" y="110" width="56" height="210" rx="6"/>
+  <!-- Metric 3 -->
+  <rect class="before" x="560" y="240" width="56" height="80" rx="6"/>
+  <rect class="after" x="626" y="170" width="56" height="150" rx="6"/>
+
+  <g class="label" font-size="15" font-weight="600" text-anchor="middle">
+    <text x="201" y="350">Metric 1</text>
+    <text x="411" y="350">Metric 2</text>
+    <text x="621" y="350">Metric 3</text>
+  </g>
+</svg>

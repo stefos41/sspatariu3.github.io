@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-label="Design process diagram: Empathize, Define, Ideate, Prototype, Test, with a loop back to iterate">
+  <!-- Placeholder process diagram. Edit the stage names and the one-line notes under each stage,
+       or replace this file with your own diagram, sketch, or photo of your process. -->
+  <style>
+    .bg { fill: #ffffff; }
+    .title { fill: #003057; }
+    .muted { fill: #556274; }
+    .stage { fill: #003057; }
+    .stage-text { fill: #ffffff; }
+    .num { fill: #b3a369; }
+    .note { fill: #1a2433; }
+    .loop { stroke: #b3a369; }
+    .loop-head { fill: #b3a369; }
+    .bracket { stroke: #c3ccd9; }
+    .phase { fill: #7a6a2c; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #121c2c; }
+      .title { fill: #f2f5f9; }
+      .muted { fill: #9aa8bb; }
+      .stage { fill: #1f3556; }
+      .stage-text { fill: #f2f5f9; }
+      .note { fill: #dfe6ef; }
+      .bracket { stroke: #34465f; }
+      .phase { fill: #d6c58a; }
+    }
+    text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect class="bg" width="1000" height="380"/>
+  <text class="title" x="40" y="44" font-size="20" font-weight="700">My Design Process</text>
+  <text class="muted" x="40" y="68" font-size="13">(edit stages and notes)</text>
+
+  <!-- iterate loop: from Test back to Ideate -->
+  <path class="loop" d="M865 112 C865 80 495 80 495 112" fill="none" stroke-width="2.5" stroke-dasharray="6 6"/>
+  <path class="loop-head" d="M495 120l-7-13h14z"/>
+  <text class="phase" x="680" y="86" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">ITERATE</text>
+
+  <!-- stages as chevrons -->
+  <g>
+    <path class="stage" d="M40 120h150l30 40-30 40H40z"/>
+    <path class="stage" d="M220 120h150l30 40-30 40H220l30-40z"/>
+    <path class="stage" d="M400 120h150l30 40-30 40H400l30-40z"/>
+    <path class="stage" d="M580 120h150l30 40-30 40H580l30-40z"/>
+    <path class="stage" d="M760 120h170l30 40-30 40H760l30-40z"/>
+  </g>
+  <g font-size="12" font-weight="700" class="num">
+    <text x="62" y="148">01</text><text x="268" y="148">02</text><text x="448" y="148">03</text><text x="628" y="148">04</text><text x="808" y="148">05</text>
+  </g>
+  <g class="stage-text" font-size="17" font-weight="700">
+    <text x="62" y="176">Empathize</text>
+    <text x="268" y="176">Define</text>
+    <text x="448" y="176">Ideate</text>
+    <text x="628" y="176">Prototype</text>
+    <text x="808" y="176">Test</text>
+  </g>
+
+  <!-- one-line notes -->
+  <g class="note" font-size="13" text-anchor="middle">
+    <text x="120" y="232">Note</text>
+    <text x="315" y="232">Note</text>
+    <text x="495" y="232">Note</text>
+    <text x="675" y="232">Note</text>
+    <text x="865" y="232">Note</text>
+  </g>
+
+  <!-- Problem / Process / Outcome brackets -->
+  <g class="bracket" fill="none" stroke-width="2">
+    <path d="M45 272v14h350v-14"/>
+    <path d="M405 272v14h350v-14"/>
+    <path d="M765 272v14h195v-14"/>
+  </g>
+  <g class="phase" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5">
+    <text x="220" y="316">THE PROBLEM</text>
+    <text x="580" y="316">THE PROCESS</text>
+    <text x="862" y="316">THE OUTCOME</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Placeholder for a photo of the Discovery Project">
+  <!-- Placeholder. Replace with a photo YOU took of your Discovery Project
+       (save it as images/discovery-photo.jpg and update the img src). -->
+  <style>
+    .bg { fill: #eef1f5; }
+    .frame { fill: #ffffff; stroke: #d3d9e2; }
+    .icon { stroke: #8794a8; }
+    .text { fill: #556274; }
+    .sub { fill: #7a6a2c; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f1826; }
+      .frame { fill: #182437; stroke: #2a3a52; }
+      .icon { stroke: #6f7f96; }
+      .text { fill: #9aa8bb; }
+      .sub { fill: #d6c58a; }
+    }
+    text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect class="bg" width="960" height="600"/>
+  <rect class="frame" x="40" y="40" width="880" height="520" rx="18" stroke-width="2" stroke-dasharray="10 8"/>
+  <g class="icon" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" transform="translate(420 190)">
+    <path d="M10 30h26l14-20h20l14 20h26a10 10 0 0 1 10 10v60a10 10 0 0 1-10 10H10A10 10 0 0 1 0 100V40a10 10 0 0 1 10-10z"/>
+    <circle cx="60" cy="70" r="24"/>
+  </g>
+  <text class="text" x="480" y="380" font-size="28" font-weight="600" text-anchor="middle">Your project photo goes here</text>
+  <text class="sub" x="480" y="420" font-size="18" font-weight="600" text-anchor="middle">Must be a photo or visual you took or created</text>
+</svg>

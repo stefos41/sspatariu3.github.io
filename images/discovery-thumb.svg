@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Discovery Project thumbnail">
+  <!-- Thumbnail for the Discovery Project card on projects.html.
+       Replace with a cropped photo of your project (16:10 works best). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#001a33"/>
+      <stop offset="1" stop-color="#0b3d6b"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+    </pattern>
+    <radialGradient id="glow" cx=".5" cy=".45" r=".55">
+      <stop offset="0" stop-color="#b3a369" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#b3a369" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <rect width="640" height="400" fill="url(#grid)"/>
+  <rect width="640" height="400" fill="url(#glow)"/>
+  <!-- lightbulb -->
+  <g fill="none" stroke="#b3a369" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="translate(260 70)">
+    <path d="M60 0a60 60 0 0 0-35 109c6 5 10 12 10 21h50c0-9 4-16 10-21A60 60 0 0 0 60 0z"/>
+    <path d="M38 158h44M46 182h28"/>
+    <path d="M45 130V95l15-15 15 15v35" stroke-opacity=".7"/>
+  </g>
+  <!-- traces -->
+  <g fill="none" stroke="#b3a369" stroke-opacity=".55" stroke-width="3" stroke-linecap="round">
+    <path d="M0 140h120l30 30h80"/>
+    <path d="M640 120H520l-30 30h-80"/>
+    <path d="M0 290h160l24-24h46"/>
+    <path d="M640 280H480l-24-24h-46"/>
+  </g>
+  <g fill="#b3a369"><circle cx="230" cy="170" r="6"/><circle cx="410" cy="150" r="6"/><circle cx="230" cy="266" r="6"/><circle cx="410" cy="256" r="6"/></g>
+  <text x="320" y="340" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#ffffff">Discovery Project</text>
+  <text x="320" y="370" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="3" text-anchor="middle" fill="#b3a369">REPLACE WITH A PROJECT PHOTO</text>
+</svg>
