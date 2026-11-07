@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Photo placeholder">
+  <!-- Placeholder headshot. Replace this file (or point the img tag at a .jpg/.png) with your own square photo. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfe5ee"/>
+      <stop offset="1" stop-color="#c3ccd9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g fill="#8794a8">
+    <circle cx="200" cy="158" r="74"/>
+    <path d="M56 400c0-92 64-146 144-146s144 54 144 146z"/>
+  </g>
+  <text x="200" y="372" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" letter-spacing="3" text-anchor="middle" fill="#ffffff">YOUR PHOTO</text>
+</svg>

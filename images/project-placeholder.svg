@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Project screenshot placeholder">
+  <!-- Placeholder. Replace with a screenshot or photo of your project (16:10 works well). -->
+  <style>
+    .bg { fill: #eef1f5; }
+    .win { fill: #ffffff; stroke: #d3d9e2; }
+    .bar { fill: #f6f7f9; }
+    .line { fill: #e1e5eb; }
+    .icon { stroke: #8794a8; }
+    .text { fill: #556274; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f1826; }
+      .win { fill: #182437; stroke: #2a3a52; }
+      .bar { fill: #1c2a40; }
+      .line { fill: #243349; }
+      .icon { stroke: #6f7f96; }
+      .text { fill: #9aa8bb; }
+    }
+    text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect class="bg" width="640" height="400"/>
+  <rect class="win" x="32" y="28" width="576" height="344" rx="12" stroke-width="2"/>
+  <path class="bar" d="M33 40a11 11 0 0 1 11-11h552a11 11 0 0 1 11 11v24H33z"/>
+  <circle cx="56" cy="47" r="6" fill="#e5675a"/>
+  <circle cx="76" cy="47" r="6" fill="#e9b949"/>
+  <circle cx="96" cy="47" r="6" fill="#5cbf6a"/>
+  <rect class="line" x="140" y="40" width="320" height="14" rx="7"/>
+
+  <g class="icon" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M286 170l-26 26 26 26"/>
+    <path d="M354 170l26 26-26 26"/>
+    <path d="M330 160l-20 72"/>
+  </g>
+  <text class="text" x="320" y="282" font-size="20" font-weight="600" text-anchor="middle">Project screenshot goes here</text>
+  <rect class="line" x="220" y="306" width="200" height="10" rx="5"/>
+</svg>
