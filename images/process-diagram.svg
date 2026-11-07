@@ -1,81 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-label="Project process diagram: Problem, Research, Prototype, Test, Outcome, with a loop from Test back to Prototype">
-  <!-- Placeholder process diagram for discovery.html. Edit the step names and the
-       one-line notes under each step, or replace this file with your own diagram,
-       sketch, or a photo of your process. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" aria-labelledby="t d">
+  <title id="t">How a GlowBox reading works</title>
+  <desc id="d">One button press, about 2 seconds: 1 photo with LEDs off, which measures any stray light; 2 photo with red LEDs on, and the LEDs switch off right after; 3 find the strip and line in any position or direction; 4 compare the line with the paper, which gives the absorbance; 5 check whether it is above the threshold set by 10 blank strips; 6 the LCD shows POS or NEG and saves the reading.</desc>
+  <!-- Steps taken from "GlowBox: A Low-Cost Reader for Colorimetric Test Strips",
+       section 2, "From a press of the button to a result". -->
   <style>
     .bg { fill: #ffffff; }
     .title { fill: #003057; }
     .muted { fill: #556274; }
-    .stage { fill: #003057; }
-    .stage-end { fill: #b3a369; }
-    .stage-text { fill: #ffffff; }
-    .stage-end-text { fill: #001a33; }
-    .num { fill: #b3a369; }
-    .num-end { fill: #003057; }
-    .note { fill: #1a2433; }
-    .loop { stroke: #b3a369; }
-    .loop-head { fill: #b3a369; }
-    .phase { fill: #7a6a2c; }
+    .card { fill: #f6f7f9; stroke: #d3d9e2; }
+    .card-end { fill: #003057; stroke: #003057; }
+    .num { fill: #7a6a2c; }
+    .num-end { fill: #e5d38f; }
+    .head { fill: #1a2433; }
+    .head-end { fill: #ffffff; }
+    .sub { fill: #556274; }
+    .sub-end { fill: #c9d3e1; }
+    .flow { stroke: #b3a369; }
+    .flow-head { fill: #b3a369; }
     @media (prefers-color-scheme: dark) {
       .bg { fill: #121c2c; }
       .title { fill: #f2f5f9; }
       .muted { fill: #9aa8bb; }
-      .stage { fill: #1f3556; }
-      .stage-end { fill: #c9b97d; }
-      .stage-text { fill: #f2f5f9; }
-      .note { fill: #dfe6ef; }
-      .phase { fill: #d6c58a; }
+      .card { fill: #182437; stroke: #2a3a52; }
+      .card-end { fill: #c9b97d; stroke: #c9b97d; }
+      .num { fill: #d6c58a; }
+      .num-end { fill: #3a3218; }
+      .head { fill: #f2f5f9; }
+      .head-end { fill: #0b1320; }
+      .sub { fill: #9aa8bb; }
+      .sub-end { fill: #2a2a1e; }
     }
     text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
   </style>
-  <rect class="bg" width="1000" height="380"/>
-  <text class="title" x="40" y="44" font-size="20" font-weight="700">My Process</text>
-  <text class="muted" x="40" y="68" font-size="13">(edit steps and notes)</text>
+  <rect class="bg" width="1000" height="400"/>
+  <text class="title" x="20" y="40" font-size="20" font-weight="700">How a reading works</text>
+  <text class="muted" x="20" y="64" font-size="13">One button press: two photos, one comparison, one answer (about 2 seconds)</text>
 
-  <!-- iterate loop: from Test back to Prototype -->
-  <path class="loop" d="M685 112 C685 80 495 80 495 112" fill="none" stroke-width="2.5" stroke-dasharray="6 6"/>
-  <path class="loop-head" d="M495 120l-7-13h14z"/>
-  <text class="phase" x="590" y="84" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">ITERATE</text>
-
-  <!-- steps as chevrons; the last one (Outcome) is gold -->
-  <g>
-    <path class="stage" d="M40 120h150l30 40-30 40H40z"/>
-    <path class="stage" d="M220 120h150l30 40-30 40H220l30-40z"/>
-    <path class="stage" d="M400 120h150l30 40-30 40H400l30-40z"/>
-    <path class="stage" d="M580 120h150l30 40-30 40H580l30-40z"/>
-    <path class="stage-end" d="M760 120h200v80H760l30-40z"/>
+  <!-- connectors -->
+  <g class="flow" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 155H330"/>
+    <path d="M640 155H670"/>
+    <path d="M830 200V230H160V262"/>
+    <path d="M300 315H330"/>
+    <path d="M640 315H670"/>
   </g>
-  <g font-size="12" font-weight="700">
-    <text class="num" x="62" y="148">01</text>
-    <text class="num" x="268" y="148">02</text>
-    <text class="num" x="448" y="148">03</text>
-    <text class="num" x="628" y="148">04</text>
-    <text class="num-end" x="808" y="148">05</text>
+  <g class="flow-head">
+    <path d="M340 155l-11-6v12z"/>
+    <path d="M680 155l-11-6v12z"/>
+    <path d="M160 272l-6-11h12z"/>
+    <path d="M340 315l-11-6v12z"/>
+    <path d="M680 315l-11-6v12z"/>
+  </g>
+
+  <!-- row 1 -->
+  <rect class="card" x="20" y="110" width="280" height="90" rx="12" stroke-width="1.5"/>
+  <rect class="card" x="340" y="110" width="300" height="90" rx="12" stroke-width="1.5"/>
+  <rect class="card" x="680" y="110" width="300" height="90" rx="12" stroke-width="1.5"/>
+  <!-- row 2 -->
+  <rect class="card" x="20" y="270" width="280" height="90" rx="12" stroke-width="1.5"/>
+  <rect class="card" x="340" y="270" width="300" height="90" rx="12" stroke-width="1.5"/>
+  <rect class="card-end" x="680" y="270" width="300" height="90" rx="12" stroke-width="1.5"/>
+
+  <g font-size="13" font-weight="700">
+    <text class="num" x="40" y="138">01</text>
+    <text class="num" x="360" y="138">02</text>
+    <text class="num" x="700" y="138">03</text>
+    <text class="num" x="40" y="298">04</text>
+    <text class="num" x="360" y="298">05</text>
+    <text class="num-end" x="700" y="298">06</text>
   </g>
   <g font-size="17" font-weight="700">
-    <text class="stage-text" x="62" y="176">Problem</text>
-    <text class="stage-text" x="268" y="176">Research</text>
-    <text class="stage-text" x="448" y="176">Prototype</text>
-    <text class="stage-text" x="628" y="176">Test</text>
-    <text class="stage-end-text" x="808" y="176">Outcome</text>
+    <text class="head" x="40" y="163">Photo with LEDs off</text>
+    <text class="head" x="360" y="163">Photo with red LEDs on</text>
+    <text class="head" x="700" y="163">Find the strip and line</text>
+    <text class="head" x="40" y="323">Compare line with paper</text>
+    <text class="head" x="360" y="323">Above the threshold?</text>
+    <text class="head-end" x="700" y="323">LCD shows POS or NEG</text>
   </g>
-
-  <!-- one-line notes under each step -->
-  <g class="note" font-size="13" text-anchor="middle">
-    <text x="120" y="236">Note</text>
-    <text x="315" y="236">Note</text>
-    <text x="495" y="236">Note</text>
-    <text x="675" y="236">Note</text>
-    <text x="870" y="236">Note</text>
-  </g>
-
-  <!-- timeline baseline with step dots -->
-  <path d="M120 290H870" stroke="#b3a369" stroke-opacity=".5" stroke-width="2"/>
-  <g fill="#b3a369">
-    <circle cx="120" cy="290" r="6"/><circle cx="315" cy="290" r="6"/><circle cx="495" cy="290" r="6"/><circle cx="675" cy="290" r="6"/><circle cx="870" cy="290" r="8"/>
-  </g>
-  <g class="phase" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.2">
-    <text x="120" y="322">START</text>
-    <text x="870" y="322">RESULT</text>
+  <g font-size="14">
+    <text class="sub" x="40" y="185">measures any stray light</text>
+    <text class="sub" x="360" y="185">LEDs switch off right after</text>
+    <text class="sub" x="700" y="185">any position or direction</text>
+    <text class="sub" x="40" y="345">gives the absorbance</text>
+    <text class="sub" x="360" y="345">set by 10 blank strips</text>
+    <text class="sub-end" x="700" y="345">and saves the reading</text>
   </g>
 </svg>

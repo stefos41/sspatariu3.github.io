@@ -1,56 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="Results chart comparing three metrics before and after the project (placeholder values)">
-  <!-- Placeholder results chart. Rename the metrics, then change each bar's height and y
-       (baseline is y=320, so a bar of height H starts at y=320-H; max height 220). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-labelledby="t d">
+  <title id="t">GlowBox test strip results</title>
+  <desc id="d">Absorbance of four test strips on a log scale, with the positive cut-off at 0.0126. Blank paper 0.006 (NEG); red marker line 0.110 (POS); faint marker line 0.232 (POS); dark blue/black marker line 0.693 (POS). Source: GlowBox report, device log files, 6 to 7 November 2026.</desc>
+  <!-- Data from "GlowBox: A Low-Cost Reader for Colorimetric Test Strips", Results > Test strips.
+       x position = 230 + 223.333 * log10(value / 0.001)  (0.001 at x=230, 1 at x=900). -->
   <style>
     .bg { fill: #ffffff; }
     .title { fill: #003057; }
+    .ink { fill: #1a2433; }
     .muted { fill: #556274; }
-    .axis { stroke: #c3ccd9; }
     .grid { stroke: #e1e5eb; }
-    .label { fill: #1a2433; }
-    .before { fill: #9aa8bb; }
-    .after { fill: #b3a369; }
+    .axis { stroke: #c3ccd9; }
+    .bar { fill: #2f6db3; }
+    .cut { stroke: #7a6a2c; }
+    .cut-text { fill: #7a6a2c; }
+    .halo { paint-order: stroke; stroke: #ffffff; stroke-width: 5px; stroke-linejoin: round; }
     @media (prefers-color-scheme: dark) {
       .bg { fill: #121c2c; }
       .title { fill: #f2f5f9; }
+      .ink { fill: #dfe6ef; }
       .muted { fill: #9aa8bb; }
-      .axis { stroke: #3a4c66; }
       .grid { stroke: #243349; }
-      .label { fill: #dfe6ef; }
-      .before { fill: #4a5d7a; }
-      .after { fill: #c9b97d; }
+      .axis { stroke: #3a4c66; }
+      .bar { fill: #5a8fd6; }
+      .cut { stroke: #d6c58a; }
+      .cut-text { fill: #d6c58a; }
+      .halo { stroke: #121c2c; }
     }
     text { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
   </style>
-  <rect class="bg" width="760" height="400"/>
-  <text class="title" x="40" y="44" font-size="20" font-weight="700">Results</text>
-  <text class="muted" x="40" y="68" font-size="13">(edit metrics and values)</text>
+  <rect class="bg" width="1000" height="380"/>
+  <text class="title" x="40" y="44" font-size="20" font-weight="700">Test strip results</text>
+  <text class="muted" x="40" y="68" font-size="13">Absorbance, log scale (each gridline is 10× more)</text>
 
-  <!-- legend -->
-  <rect class="before" x="520" y="34" width="14" height="14" rx="3"/>
-  <text class="label" x="542" y="46" font-size="13">Before</text>
-  <rect class="after" x="610" y="34" width="14" height="14" rx="3"/>
-  <text class="label" x="632" y="46" font-size="13">After</text>
-
-  <!-- gridlines -->
-  <g class="grid" stroke-width="1" stroke-dasharray="3 4">
-    <path d="M90 100h630M90 155h630M90 210h630M90 265h630"/>
+  <!-- gridlines + baseline -->
+  <g class="grid" stroke-width="1">
+    <path d="M453.3 96V302M676.7 96V302M900 96V302"/>
   </g>
-  <path class="axis" d="M90 320h630" stroke-width="2"/>
+  <path class="axis" d="M230 96V302" stroke-width="2"/>
 
-  <!-- Metric 1 -->
-  <rect class="before" x="140" y="210" width="56" height="110" rx="6"/>
-  <rect class="after" x="206" y="140" width="56" height="180" rx="6"/>
-  <!-- Metric 2 -->
-  <rect class="before" x="350" y="180" width="56" height="140" rx="6"/>
-  <rect class="after" x="416" y="110" width="56" height="210" rx="6"/>
-  <!-- Metric 3 -->
-  <rect class="before" x="560" y="240" width="56" height="80" rx="6"/>
-  <rect class="after" x="626" y="170" width="56" height="150" rx="6"/>
-
-  <g class="label" font-size="15" font-weight="600" text-anchor="middle">
-    <text x="201" y="350">Metric 1</text>
-    <text x="411" y="350">Metric 2</text>
-    <text x="621" y="350">Metric 3</text>
+  <!-- bars: square at the baseline, 4px rounded data end -->
+  <g class="bar">
+    <path d="M230 110H399.8a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H230z"/>
+    <path d="M230 160H681.9a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H230z"/>
+    <path d="M230 210H754.3a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H230z"/>
+    <path d="M230 260H860.4a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H230z"/>
   </g>
+
+  <!-- cut-off line -->
+  <path class="cut" d="M475.8 90V306" stroke-width="2" stroke-dasharray="5 4"/>
+  <text class="cut-text" x="481" y="94" font-size="13" font-weight="700">cut-off 0.0126</text>
+
+  <!-- category labels -->
+  <g class="ink" font-size="14" font-weight="600" text-anchor="end">
+    <text x="218" y="129">Blank paper</text>
+    <text x="218" y="179">Red marker line</text>
+    <text x="218" y="229">Faint marker line</text>
+    <text x="218" y="279">Dark blue/black line</text>
+  </g>
+
+  <!-- value labels (text ink, not series color) -->
+  <g class="ink halo" font-size="14">
+    <text x="413" y="129">0.006 NEG</text>
+    <text x="696" y="179">0.110 POS</text>
+    <text x="768" y="229">0.232 POS</text>
+    <text x="874" y="279">0.693 POS</text>
+  </g>
+
+  <!-- x axis ticks -->
+  <g class="muted" font-size="13" text-anchor="middle">
+    <text x="230" y="326">0.001</text>
+    <text x="453.3" y="326">0.01</text>
+    <text x="676.7" y="326">0.1</text>
+    <text x="900" y="326">1</text>
+  </g>
+  <text class="muted" x="565" y="354" font-size="13" text-anchor="middle">absorbance</text>
 </svg>
