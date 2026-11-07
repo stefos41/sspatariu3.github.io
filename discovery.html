@@ -58,11 +58,10 @@
 <h2 id="overview-title">Overview</h2>
 <div class="overview-grid">
 <div>
-<p>We built GlowBox, a low-cost reader that turns the line on a test strip into a number. It shines red light on the strip, photographs it with a Raspberry Pi camera, and measures how much darker the line is than the paper next to it. The LCD then shows that number and a simple POS or NEG.</p>
-<p>On our prototype, every blank we tested read NEG and every marker line read POS. Most of the work was not the idea but making it reliable: seven engineering problems, from LED glare to a shadow that looked like a line, each solved mostly in software, so the device works without a laptop.</p>
+<p>I built GlowBox, a low-cost reader that turns the line on a test strip into a number. It shines red light on the strip, photographs it with a Raspberry Pi camera, and measures how much darker the line is than the paper next to it. The LCD then shows that number and a simple POS or NEG.</p>
+<p>On my prototype, every blank I tested read NEG and every marker line read POS. Most of the work was not the idea but making it reliable: seven engineering problems, from LED glare to a shadow that looked like a line, each solved mostly in software, so the device works without a laptop.</p>
 </div>
 <dl class="facts" aria-label="Project at a glance">
-<div><dt>Team</dt><dd>GT Medical Robotics</dd></div>
 <div><dt>Course / Program</dt><dd><span class="todo">TODO</span></dd></div>
 <div><dt>Timeline</dt><dd>Results logged 6&ndash;7 November 2026 <span class="todo">TODO: start date</span></dd></div>
 <div><dt>My Role</dt><dd><span class="todo">TODO</span></dd></div>
@@ -81,7 +80,7 @@
 <h2 id="problem-title"><span class="section-kicker" aria-hidden="true">01</span>The Problem</h2>
 <p>Test strips are everywhere: rapid infection tests, pregnancy tests, and food and water safety tests, including strips that detect bacteria such as E. coli. They are cheap and fast, and they share one weak point: a person has to look at the line and decide.</p>
 <p>That works for a strong line. It breaks down for a faint one. Two people can look at the same strip and disagree, and the answer can change with room lighting, eyesight, or how tired someone is. Nothing gets written down either. Commercial strip readers solve this, but they are usually closed, single-brand devices.</p>
-<p class="goal-line"><strong>Our goal:</strong> build a low-cost, open reader that turns a test-strip line into an objective, recorded number, using parts a student team can buy and assemble.</p>
+<p class="goal-line"><strong>My goal:</strong> build a low-cost, open reader that turns a test-strip line into an objective, recorded number, using parts a student team can buy and assemble.</p>
 </section>
 
 <!-- ============ The Process ============ -->
@@ -100,7 +99,7 @@
 <h3>Seven engineering problems</h3>
 <p>The physics is simple; making it work reliably on a cardboard prototype was not. Most fixes ended up in software, so the device copes with an imperfect setup instead of needing a perfect one.</p>
 <ol class="problem-list">
-<li><strong>The original plan needed a part we could not get.</strong> Detecting glowing dye needs an optical filter we did not have, so we switched to measuring how much light the line absorbs: a shadow, not a glow.</li>
+<li><strong>The original plan needed a part I could not get.</strong> Detecting glowing dye needs an optical filter I did not have, so I switched to measuring how much light the line absorbs: a shadow, not a glow.</li>
 <li><strong>The camera barely saw the LED.</strong> Switching it on changed the picture by only 2.5 out of 1,023. Re-aiming the LED and raising the exposure brought the strip to 42% of full scale, inside the 40&ndash;80% target.</li>
 <li><strong>The code measured the wrong part of the picture.</strong> It now finds the strip by itself, so the strip can sit anywhere, in either direction.</li>
 <li><strong>Glare and uneven light confused the strip finder.</strong> Bright glare spots are set aside, dim parts of the strip are joined back on, and paper in front of the LED spreads its light.</li>
@@ -118,7 +117,7 @@
 <img src="images/results-chart.svg" alt="Bar chart of absorbance on a log scale with a cut-off line at 0.0126: blank paper 0.006 (NEG), red marker line 0.110 (POS), faint marker line 0.232 (POS), dark blue/black marker line 0.693 (POS)." width="1000" height="380">
 <figcaption>Test strips, from the device's own log files (prototype, 6&ndash;7 November 2026). Red ink still absorbs some deep red light, so it reads POS, but about 6&times; weaker than the blue/black line: red light suits blue or dark labels best.</figcaption>
 </figure>
-<p>GlowBox is a prototype measurement tool, not a medical device. We tested marker lines, not real test strips; it reads one line, while real strips have a test line and a control line; and red light barely sees the red/pink lines many commercial tests use. Next steps, in order: a test/control line mode, green LEDs for red/pink-line strips, a dilution series to map the detection limit, real commercial strips with known amounts of bacteria, and a sturdier enclosure.</p>
+<p>GlowBox is a prototype measurement tool, not a medical device. I tested marker lines, not real test strips; it reads one line, while real strips have a test line and a control line; and red light barely sees the red/pink lines many commercial tests use. Next steps, in order: a test/control line mode, green LEDs for red/pink-line strips, a dilution series to map the detection limit, real commercial strips with known amounts of bacteria, and a sturdier enclosure.</p>
 </section>
 
 <!-- ============ What I Learned ============ -->
@@ -129,16 +128,14 @@
 
 <!-- ============ Video (optional) ============ -->
 <section class="section" id="video" aria-labelledby="video-title">
-<h2 id="video-title">Video <span class="optional">(optional)</span></h2>
-<p><span class="todo">TODO (optional): Embed a demo or walkthrough video. For YouTube, use Share → Embed and paste the iframe inside the box below. Delete this whole section (and its "Video" jump link above) if you have no video.</span></p>
-<div class="video-embed">
-<!-- Paste the YouTube <iframe ...></iframe> code here, then delete the placeholder div below.
-     The box keeps a 16:9 shape and the video fills it automatically. -->
-<div class="video-placeholder">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>
-<span>Video embed area</span>
-</div>
-</div>
+<h2 id="video-title">Video</h2>
+<figure class="video-figure">
+<video controls playsinline preload="metadata" poster="images/glowbox-video-poster.jpg" width="720" height="1280" aria-label="Video of GlowBox: the cardboard lid over the enclosure is lifted to show red light and wiring inside, then the LCD shows a reading of A=0.006 NEG.">
+<source src="videos/glowbox-demo.mp4" type="video/mp4">
+<p>Your browser can't play this video. <a href="videos/glowbox-demo.mp4">Download the GlowBox video (MP4, 1.6&nbsp;MB)</a>.</p>
+</video>
+<figcaption><span class="todo">TODO: Caption for this video (what it shows).</span></figcaption>
+</figure>
 </section>
 
 <p class="feature-footer"><a class="btn btn-ghost" href="projects.html">&larr; Back to Projects</a></p>

@@ -707,31 +707,20 @@ figcaption {
 .pitch-card p { font-size: 1.15rem; line-height: 1.75; }
 .pitch-card > :last-child { margin-bottom: 0; }
 
-.video-embed {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  max-width: 760px;
-  margin: var(--space-5) 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--surface-2);
-  border: 2px dashed var(--border);
+/* Project videos (portrait phone clips): a centered card, never taller than the screen */
+.video-figure { width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; }
+.video-figure video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(80vh, 720px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: calc(var(--radius) - 6px);
+  background: #000;
 }
-.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.video-embed:has(iframe) { border: 0; box-shadow: var(--shadow-md); }
-.video-placeholder {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: var(--space-3);
-  color: var(--muted);
-  font-size: .95rem;
-  text-align: center;
-  padding: var(--space-4);
-}
-.video-placeholder svg { width: 56px; height: 56px; color: var(--gold); }
+.video-figure figcaption { max-width: 48ch; }
 
 /* Resume */
 .pdf-frame {
@@ -857,7 +846,6 @@ figcaption {
   font-size: .5em;
   letter-spacing: 0;
 }
-.optional { font-weight: 500; font-size: .7em; color: var(--muted); }
 .feature-footer { margin-top: var(--space-7); }
 
 /* portrait photos: keep them a sensible height instead of full content width */

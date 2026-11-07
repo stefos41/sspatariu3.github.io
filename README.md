@@ -50,11 +50,14 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 | `images/results-chart.svg` | GlowBox, The Outcome | Test-strip absorbance values from the GlowBox report |
 | `images/buzzstep-photo.jpg` | BuzzStep, Overview | Still from Stefan's BuzzStep video |
 | `images/buzzstep-thumb.jpg` | Projects, BuzzStep card | 16:10 crop of the same still |
+| `images/glowbox-video-poster.jpg` | GlowBox, Video | Poster frame for `videos/glowbox-demo.mp4` |
+| `videos/glowbox-demo.mp4` | GlowBox, Video | Stefan's GlowBox video, web copy (no sound in the original) |
+| `videos/buzzstep-demo.mp4` | BuzzStep, Video | Stefan's BuzzStep video, web copy with sound; poster is `images/buzzstep-photo.jpg` |
 
 `images/skills-chart.svg`, `images/project-placeholder.svg` and the SVGs in the repo root are older placeholders that no page uses any more; you can delete them.
 
 ## Editing tips
 
-- **Video (optional):** in `discovery.html` or `project-2.html`, paste the YouTube `<iframe>` inside `<div class="video-embed">` and delete the placeholder div.
+- **Videos:** project videos live in `videos/` as H.264 MP4 (720px wide, metadata stripped) and play in a `<figure class="video-figure">` on each project page, with a poster image from `images/`. To swap in a YouTube video instead, replace the `<video>` element with YouTube's Share → Embed `<iframe>`.
 - **Section links:** `about.html#bio`, `#pitch`, `#goals`; `discovery.html` and `project-2.html` both have `#overview`, `#problem`, `#process`, `#outcome`, `#learned`, `#video`.
 - Keep all links relative (`page.html`, `images/x.jpg`, no leading `/`) so the site works under a GitHub Pages subpath.
