@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Discovery Project | YOUR NAME ePortfolio</title>
-<meta name="description" content="Discovery Project Feature by YOUR NAME: the problem, the process, and the outcome.">
+<title>GlowBox | Stefan Spatariu ePortfolio</title>
+<meta name="description" content="GlowBox, a low-cost reader that turns the line on a colorimetric test strip into a number. Discovery Project Feature by Stefan Spatariu.">
 <meta name="theme-color" content="#001a33">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header" id="top">
 <div class="wrap header-inner">
-<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="30" height="30">YOUR NAME</a>
+<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="30" height="30">Stefan Spatariu</a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Open menu</span></button>
 <nav id="site-nav" class="site-nav" aria-label="Main">
 <a href="index.html">Home</a>
@@ -33,22 +33,15 @@
 <main id="main">
 <header class="page-hero">
 <div class="wrap">
-<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><span aria-current="page">Discovery Project</span></li></ol></nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><span aria-current="page">GlowBox</span></li></ol></nav>
 <p class="eyebrow">Discovery Project Feature</p>
-<h1><span class="todo">TODO: Project title</span></h1>
-<p class="lede"><span class="todo">TODO: One-sentence hook: the problem in a nutshell and what you made.</span></p>
+<h1>GlowBox</h1>
+<p class="lede">A low-cost reader for colorimetric test strips.</p>
 </div>
 </header>
 
 <div class="wrap content">
-<p class="feature-topbar">
-<a class="back-link" href="projects.html">&larr; Back to Projects</a>
-<span class="todo status-note">TODO: In progress, full feature coming by the Discovery Project Showcase.</span>
-</p>
-
-<aside class="requirements" aria-label="Feature requirements">
-<p><span class="todo">TODO: Requirements for this feature: the write-up (Overview + The Problem + The Process + The Outcome + What I Learned) must total at least 400 words, and at least one image on this page must be a photo or visual you took or created yourself. The video is optional.</span></p>
-</aside>
+<p class="feature-topbar"><a class="back-link" href="projects.html">&larr; Back to Projects</a></p>
 
 <nav class="page-toc" aria-label="On this page">
 <span class="page-toc-label">On this page</span>
@@ -65,52 +58,73 @@
 <h2 id="overview-title">Overview</h2>
 <div class="overview-grid">
 <div>
-<p><span class="todo">TODO: What the project is, why you chose it, and the headline result, in plain language for a non-expert reader (about 75 to 100 words).</span></p>
+<p>We built GlowBox, a low-cost reader that turns the line on a test strip into a number. It shines red light on the strip, photographs it with a Raspberry Pi camera, and measures how much darker the line is than the paper next to it. The LCD then shows that number and a simple POS or NEG.</p>
+<p>On our prototype, every blank we tested read NEG and every marker line read POS. Most of the work was not the idea but making it reliable: seven engineering problems, from LED glare to a shadow that looked like a line, each solved mostly in software, so the device works without a laptop.</p>
 </div>
 <dl class="facts" aria-label="Project at a glance">
+<div><dt>Team</dt><dd>GT Medical Robotics</dd></div>
 <div><dt>Course / Program</dt><dd><span class="todo">TODO</span></dd></div>
-<div><dt>Timeline</dt><dd><span class="todo">TODO</span></dd></div>
-<div><dt>Team</dt><dd><span class="todo">TODO: Solo or team of N</span></dd></div>
+<div><dt>Timeline</dt><dd>Results logged 6&ndash;7 November 2026 <span class="todo">TODO: start date</span></dd></div>
 <div><dt>My Role</dt><dd><span class="todo">TODO</span></dd></div>
-<div><dt>Tools</dt><dd><span class="todo">TODO</span></dd></div>
+<div><dt>Tools</dt><dd>Raspberry Pi 4, Pi Camera Module 3, Python (about 1,400 lines), 650&nbsp;nm red LED, IRLZ44N MOSFET, 16&times;2 LCD</dd></div>
+<div><dt>Code</dt><dd><a href="https://github.com/stefos41/Absorbance">github.com/stefos41/Absorbance</a></dd></div>
 </dl>
 </div>
 <figure>
-<img src="images/discovery-photo.svg" alt="Placeholder for a photo of the Discovery Project" width="960" height="600">
-<figcaption><span class="todo">TODO: Replace with a photo you took of your project (e.g. images/discovery-photo.jpg), update the alt text to describe what it shows, and write a caption here.</span></figcaption>
+<img src="images/glowbox-photo.jpg" alt="GlowBox's LCD reading &quot;A=0.006 NEG&quot; and &quot;thr=0.013 #4&quot;, mounted inside the cardboard enclosure above a breadboard with jumper wires and a glowing green LED." width="1600" height="900">
+<figcaption>The LCD after a reading of a blank strip: A=0.006 NEG, with the cut-off (thr=0.013) and the reading number.</figcaption>
 </figure>
 </section>
 
 <!-- ============ The Problem ============ -->
 <section class="section" id="problem" aria-labelledby="problem-title">
 <h2 id="problem-title"><span class="section-kicker" aria-hidden="true">01</span>The Problem</h2>
-<p><span class="todo">TODO: What problem did you investigate? Who is affected, why it matters, and any constraints (time, budget, materials). Include what you learned from research or from talking to users (about 75 to 100 words).</span></p>
+<p>Test strips are everywhere: rapid infection tests, pregnancy tests, and food and water safety tests, including strips that detect bacteria such as E. coli. They are cheap and fast, and they share one weak point: a person has to look at the line and decide.</p>
+<p>That works for a strong line. It breaks down for a faint one. Two people can look at the same strip and disagree, and the answer can change with room lighting, eyesight, or how tired someone is. Nothing gets written down either. Commercial strip readers solve this, but they are usually closed, single-brand devices.</p>
+<p class="goal-line"><strong>Our goal:</strong> build a low-cost, open reader that turns a test-strip line into an objective, recorded number, using parts a student team can buy and assemble.</p>
 </section>
 
 <!-- ============ The Process ============ -->
 <section class="section" id="process" aria-labelledby="process-title">
 <h2 id="process-title"><span class="section-kicker" aria-hidden="true">02</span>The Process</h2>
-<p><span class="todo">TODO: Walk through your design process step by step (e.g. empathize, define, ideate, prototype, test). What options did you consider, what did you build or test, and what changed after each iteration? (about 125 to 150 words)</span></p>
+<p>The idea fits in one sentence: a coloured line soaks up light, so under the right light it looks darker than the paper around it, and how much darker tells you how much dye is there. GlowBox uses red light (650&nbsp;nm), which blue, purple and black lines absorb strongly, and compares the line with the clean paper right next to it in the same photo:</p>
+<p class="formula"><code>absorbance = &minus;log<sub>10</sub>(line brightness &divide; paper brightness)</code></p>
+<p>If the line reflects the same light as the paper, absorbance is 0. If it reflects half as much, absorbance is about 0.3. The darker the line, the bigger the number.</p>
+<p>GlowBox is a cardboard enclosure with two compartments: a dark measuring chamber on one side and the electronics on the other. A Raspberry Pi 4 runs the camera, does the maths and drives the display; a Raspberry Pi Camera Module 3 photographs the strip from about 15&nbsp;cm above; a 650&nbsp;nm red LED, diffused with paper, lights the strip from the side; and an IRLZ44N transistor lets the Pi switch the LED on and off. About 1,400 lines of Python start automatically when the device is powered on. An older Raspberry Pi 1 was used first as a test bench, so a wiring mistake could only damage the old board.</p>
+
 <figure>
-<img src="images/process-diagram.svg" alt="Project process diagram: Problem, Research, Prototype, Test, and Outcome, with a loop from Test back to Prototype for iteration" width="1000" height="380">
-<figcaption><span class="todo">TODO: Edit the stages and notes in images/process-diagram.svg, or replace it with your own diagram, sketch, or a photo of a prototype.</span></figcaption>
+<img src="images/process-diagram.svg" alt="Six-step diagram of a GlowBox reading: photo with LEDs off, photo with red LEDs on, find the strip and line, compare line with paper, check whether it is above the threshold, then the LCD shows POS or NEG and saves the reading." width="1000" height="400">
+<figcaption>One button press, about 2 seconds. The LEDs-off photo is subtracted from the lit photo first, so stray light that reaches the camera does not count as paper or line.</figcaption>
 </figure>
+
+<h3>Seven engineering problems</h3>
+<p>The physics is simple; making it work reliably on a cardboard prototype was not. Most fixes ended up in software, so the device copes with an imperfect setup instead of needing a perfect one.</p>
+<ol class="problem-list">
+<li><strong>The original plan needed a part we could not get.</strong> Detecting glowing dye needs an optical filter we did not have, so we switched to measuring how much light the line absorbs: a shadow, not a glow.</li>
+<li><strong>The camera barely saw the LED.</strong> Switching it on changed the picture by only 2.5 out of 1,023. Re-aiming the LED and raising the exposure brought the strip to 42% of full scale, inside the 40&ndash;80% target.</li>
+<li><strong>The code measured the wrong part of the picture.</strong> It now finds the strip by itself, so the strip can sit anywhere, in either direction.</li>
+<li><strong>Glare and uneven light confused the strip finder.</strong> Bright glare spots are set aside, dim parts of the strip are joined back on, and paper in front of the LED spreads its light.</li>
+<li><strong>Taking the strip out and back in changed the reading</strong> from 0.70 to 0.89. An L-shaped holder tightened re-inserted readings to 0.710&ndash;0.726, about 1%.</li>
+<li><strong>A shadow looked like a line.</strong> The holder's edge made blank strips read about 0.52. Skipping the holder end and only accepting a line with clean paper on both sides dropped blanks to 0.0076.</li>
+<li><strong>Tiny shiny spots blocked whole readings.</strong> Glossy ink reflected LED light like a mirror. Maxed-out pixels are now left out, and the dark line measured correctly (0.69).</li>
+</ol>
 </section>
 
 <!-- ============ The Outcome ============ -->
 <section class="section" id="outcome" aria-labelledby="outcome-title">
 <h2 id="outcome-title"><span class="section-kicker" aria-hidden="true">03</span>The Outcome</h2>
-<p><span class="todo">TODO: What did you produce, and how well did it work? Give measurable results where you can (before vs. after, test data, feedback), and be honest about what didn't work (about 75 to 100 words).</span></p>
+<p>With the final setup, every one of 15 readings was called correctly: all 9 blank readings came out NEG and all 6 line readings came out POS. Calibration on 10 blank strips gave an average of 0.0076 with a spread of 0.0013, which set the cut-off for POS at 0.0126 (average + 3 &times; spread). That means GlowBox flags a line that blocks only about 3% of the red light, fainter than most people can reliably see. The same unmoved strip measured twice read 0.7625 and 0.7629.</p>
 <figure>
-<img src="images/results-chart.svg" alt="Bar chart comparing three metrics before and after the project" width="760" height="400">
-<figcaption><span class="todo">TODO: Edit the metric names and bar heights in images/results-chart.svg to show your real results, or replace it with your own chart, and update this alt text.</span></figcaption>
+<img src="images/results-chart.svg" alt="Bar chart of absorbance on a log scale with a cut-off line at 0.0126: blank paper 0.006 (NEG), red marker line 0.110 (POS), faint marker line 0.232 (POS), dark blue/black marker line 0.693 (POS)." width="1000" height="380">
+<figcaption>Test strips, from the device's own log files (prototype, 6&ndash;7 November 2026). Red ink still absorbs some deep red light, so it reads POS, but about 6&times; weaker than the blue/black line: red light suits blue or dark labels best.</figcaption>
 </figure>
+<p>GlowBox is a prototype measurement tool, not a medical device. We tested marker lines, not real test strips; it reads one line, while real strips have a test line and a control line; and red light barely sees the red/pink lines many commercial tests use. Next steps, in order: a test/control line mode, green LEDs for red/pink-line strips, a dilution series to map the detection limit, real commercial strips with known amounts of bacteria, and a sturdier enclosure.</p>
 </section>
 
 <!-- ============ What I Learned ============ -->
 <section class="section callout" id="learned" aria-labelledby="learned-title">
 <h2 id="learned-title">What I Learned</h2>
-<p><span class="todo">TODO: Key technical and personal takeaways, what you'd do differently next time, and how this connects to your career goals (about 50 to 75 words).</span></p>
+<p>The hard part was not the idea but the details: glare, shadows, uneven light and shiny ink each broke the measurement in a different way. Solving them in software made the device tolerant of an imperfect, low-cost build, and that is what makes a reader like this practical to build and share.</p>
 </section>
 
 <!-- ============ Video (optional) ============ -->
@@ -133,7 +147,7 @@
 
 <footer class="site-footer">
 <div class="wrap footer-inner">
-<p>&copy; 2026 YOUR NAME &middot; Built with GitHub Pages</p>
+<p>&copy; 2026 Stefan Spatariu &middot; Built with GitHub Pages</p>
 <p><a href="#top">Back to top &uarr;</a></p>
 </div>
 </footer>
