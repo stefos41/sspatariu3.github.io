@@ -160,7 +160,6 @@ strong { font-weight: 600; }
 
 .content { padding-top: var(--space-7); padding-bottom: var(--space-8); }
 .wrap.content > :first-child { margin-top: 0; }
-.about h2:first-child { margin-top: 0; }
 
 .section { margin-top: var(--space-7); }
 .section > h2:first-child { margin-top: 0; }
@@ -639,22 +638,6 @@ h4 { font-size: 1.15rem; font-weight: 600; }
 .card-featured { border-top: 4px solid var(--gold); }
 .card-featured .badge { position: absolute; top: clamp(1.25rem, 3vw, 1.75rem); right: clamp(1.25rem, 3vw, 1.75rem); }
 
-/* Note boxes styled like a TODO (optional items) */
-.todo-note {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3) var(--space-5);
-  margin: var(--space-5) 0;
-  padding: var(--space-4) var(--space-5);
-  border: 2px dashed #e0c95a;
-  border-radius: var(--radius);
-  background: rgba(255, 243, 196, .35);
-}
-.todo-note p { margin: 0; flex: 1 1 320px; }
-@media (prefers-color-scheme: dark) { .todo-note { background: rgba(255, 243, 196, .06); border-color: #8a7a2c; } }
-
 /* callout (highlighted section) */
 .callout {
   background: var(--surface);
@@ -686,10 +669,17 @@ figcaption {
 
 /* ---------- 7. Page-specific ---------- */
 
-/* Home: about + banner side by side on wide screens */
-.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
-.about figure { margin: 0; }
-@media (max-width: 820px) { .about { grid-template-columns: 1fr; } }
+/* Home: welcome statement as a single highlighted card */
+.welcome {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius-sm) var(--radius) var(--radius) var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+.welcome p { font-size: 1.1rem; }
+.welcome > :last-child { margin-bottom: 0; }
 
 /* Pitch */
 .pitch-card {
@@ -785,7 +775,8 @@ figcaption {
 /* Projects hub: scalable card grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  /* auto-fit: two projects share the row 50/50; a third card adds a column */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-5);
 }
 .project-tile { margin: 0; padding: 0; overflow: hidden; }
@@ -798,20 +789,8 @@ figcaption {
 .project-tile h3 { font-size: 1.25rem; }
 .card-link.project-tile p:not(.project-badges) { color: var(--muted); }
 
-/* the featured tile spans the full row with the image beside the text */
-.project-tile.is-featured { grid-column: 1 / -1; flex-direction: row; border: 1px solid var(--gold); }
-.project-tile.is-featured .project-thumb { flex: 0 0 min(52%, 560px); aspect-ratio: auto; min-height: 280px; border-bottom: 0; border-right: 1px solid var(--border); }
-.project-tile.is-featured .project-body { justify-content: center; padding: clamp(1.5rem, 4vw, 2.5rem); }
-.project-tile.is-featured h3 { font-size: clamp(1.35rem, 2.4vw, 1.75rem); }
-@media (max-width: 760px) {
-  .project-tile.is-featured { flex-direction: column; }
-  .project-tile.is-featured .project-thumb { flex: none; aspect-ratio: 16 / 10; min-height: 0; border-right: 0; border-bottom: 1px solid var(--border); }
-}
-
-/* visible "add a project" placeholder */
-.project-template { border: 2px dashed #e0c95a; box-shadow: none; background: transparent; }
-.project-template .project-thumb { opacity: .7; }
-@media (prefers-color-scheme: dark) { .project-template { border-color: #8a7a2c; } }
+/* the featured tile gets a gold outline and top edge */
+.project-tile.is-featured { border: 1px solid var(--gold); box-shadow: 0 0 0 1px var(--gold), var(--shadow-sm); }
 
 /* Discovery feature */
 .feature-topbar {
