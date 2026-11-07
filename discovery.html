@@ -4,14 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Individual Discovery | YOUR NAME ePortfolio</title>
+<meta name="description" content="Individual Discovery: strengths, values, and interests of YOUR NAME.">
+<meta name="theme-color" content="#001a33">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+<script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="wrap">
-<a class="brand" href="index.html">YOUR NAME</a>
-<nav>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="top">
+<div class="wrap header-inner">
+<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="30" height="30">YOUR NAME</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Open menu</span></button>
+<nav id="site-nav" class="site-nav" aria-label="Main">
 <a href="index.html">Home</a>
-<a class="active" href="discovery.html">Discovery</a>
+<a class="active" aria-current="page" href="discovery.html">Discovery</a>
 <a href="roadmap.html">Roadmap</a>
 <a href="pitch.html">Pitch</a>
 <a href="resume.html">Resume</a>
@@ -19,32 +30,59 @@
 <a href="reflection.html">Reflection</a>
 <a href="contact.html">Contact</a>
 </nav>
-</div></header>
+</div>
+</header>
 
-<main><div class="wrap">
+<main id="main">
+<header class="page-hero">
+<div class="wrap">
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Individual Discovery</span></li></ol></nav>
 <h1>Individual Discovery</h1>
-<p><span class="todo">TODO: 1 paragraph intro. What was the Individual Discovery Project and what did you set out to learn about yourself?</span></p>
+<p class="lede"><span class="todo">TODO: 1 paragraph intro. What was the Individual Discovery Project and what did you set out to learn about yourself?</span></p>
+</div>
+</header>
 
+<div class="wrap content">
+<div class="grid-3">
+<section class="card feature">
+<span class="num" aria-hidden="true">01</span>
 <h2>My Strengths</h2>
 <p><span class="todo">TODO: Paste or summarize your strengths and any assessment results (e.g. CliftonStrengths, Myers-Briggs, Holland Code). Explain what they mean for your work as an engineer.</span></p>
-
+</section>
+<section class="card feature">
+<span class="num" aria-hidden="true">02</span>
 <h2>My Values</h2>
 <p><span class="todo">TODO: What matters to you in a career and in life? Work-life balance, impact, salary, creativity, stability? Give examples.</span></p>
-
+</section>
+<section class="card feature">
+<span class="num" aria-hidden="true">03</span>
 <h2>My Interests</h2>
 <p><span class="todo">TODO: Topics, hobbies, and areas of computer engineering that excite you, and why.</span></p>
+</section>
+</div>
 
 <figure>
-<img src="images/skills-chart.svg" alt="Skills and strengths chart">
+<img src="images/skills-chart.svg" alt="Bar chart of my top five strengths" width="760" height="360">
 <figcaption><span class="todo">TODO: Replace with a chart of your own assessment results, or edit the labels in skills-chart.svg.</span></figcaption>
 </figure>
 
+<section class="section">
 <h2>What I Learned</h2>
 <p><span class="todo">TODO: Key takeaways. What surprised you? What changed about how you see your future?</span></p>
+</section>
 
+<section class="section callout">
 <h2>Personal Brand</h2>
 <p><span class="todo">TODO: Three words that describe your brand, and a short paragraph on how you want to be known professionally.</span></p>
-</div></main>
-<footer>&copy; 2026 YOUR NAME &middot; Built with GitHub Pages</footer>
+</section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<p>&copy; 2026 YOUR NAME &middot; Built with GitHub Pages</p>
+<p><a href="#top">Back to top &uarr;</a></p>
+</div>
+</footer>
 </body>
 </html>
