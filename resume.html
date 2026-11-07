@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resume | YOUR NAME ePortfolio</title>
-<meta name="description" content="Resume, projects, and experience of YOUR NAME, Computer Engineering student at Georgia Tech.">
+<meta name="description" content="Resume of YOUR NAME, Computer Engineering student at Georgia Tech.">
 <meta name="theme-color" content="#001a33">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
 <nav id="site-nav" class="site-nav" aria-label="Main">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="discovery.html">Discovery</a>
+<a href="projects.html">Projects</a>
 <a class="active" aria-current="page" href="resume.html">Resume</a>
 <a href="contact.html">Contact</a>
 </nav>
@@ -35,69 +35,27 @@
 <div class="wrap">
 <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Resume</span></li></ol></nav>
 <h1>Resume</h1>
-<div class="hero-actions">
-<a class="btn" href="resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download PDF</a>
-<a class="btn btn-light" href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open in new tab</a>
+<p class="lede">Education, experience, skills, and coursework.</p>
+<div class="hero-actions resume-actions">
+<a class="btn btn-lg" href="resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download Resume (PDF)</a>
+<a class="btn btn-light" href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open full screen</a>
 </div>
 </div>
 </header>
 
 <div class="wrap content">
-<nav class="page-toc" aria-label="On this page">
-<span class="page-toc-label">On this page</span>
-<a href="#viewer">Resume</a>
-<a href="#highlights">Highlights</a>
-<a href="#experience">Experience</a>
-</nav>
-
-<section class="section" id="viewer" aria-label="Resume viewer">
 <p><span class="todo">TODO: Upload your resume to this repo as resume.pdf (exact name). The viewer below will then show it automatically.</span></p>
+
+<div class="todo-note">
+<p><span class="todo">TODO (optional): If you make a 1-page ECE Career Fair version, upload it as resume-career-fair.pdf. Otherwise delete this box.</span></p>
+<a class="btn btn-ghost btn-sm" href="resume-career-fair.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download 1-page Career Fair version</a>
+</div>
+
 <div class="pdf-frame">
-<div class="pdf-frame-bar" aria-hidden="true">resume.pdf</div>
-<iframe src="resume.pdf" width="100%" height="900" title="Resume PDF"></iframe>
+<div class="pdf-frame-bar"><span aria-hidden="true">resume.pdf</span></div>
+<iframe src="resume.pdf" width="100%" height="900" title="Resume of YOUR NAME (PDF)"></iframe>
 </div>
-</section>
-
-<section class="section" id="highlights">
-<h2>Resume Highlights</h2>
-<p><span class="todo">TODO: 3 to 5 sentences calling out your most important experiences and skills, and what you changed during the Polished Resume assignment.</span></p>
-</section>
-
-<section class="section" id="experience" aria-labelledby="experience-title">
-<h2 id="experience-title">Experience &amp; Involvement</h2>
-<p>This section grows as I do. Copy any card below to add a new entry.</p>
-
-<div class="subsection">
-<h3>Projects</h3>
-<p><span class="todo">TODO: Add one card per project you want to show off (class, club, or personal). Lead with your strongest one.</span></p>
-<!-- To add a project, copy everything from <article ...> to </article>. -->
-<article class="card project-card">
-<div class="project-media">
-<img src="images/project-placeholder.svg" alt="Project screenshot" width="640" height="400">
-</div>
-<div>
-<h4><span class="todo">TODO: Project name</span></h4>
-<p><span class="todo">TODO: What it is, what you built, tools used, what you learned.</span></p>
-<p class="project-links"><a class="btn btn-sm" href="#">Live demo</a> <a class="btn btn-sm btn-ghost" href="#">Code on GitHub</a></p>
-</div>
-</article>
-</div>
-
-<div class="grid-3 subsection">
-<div class="card exp-card">
-<h3>Coursework</h3>
-<p><span class="todo">TODO: Courses so far that connect to your goals, and what you learned from each.</span></p>
-</div>
-<div class="card exp-card">
-<h3>Work Experience</h3>
-<p><span class="todo">TODO: Jobs, internships, or research. Role, dates, and what you accomplished.</span></p>
-</div>
-<div class="card exp-card">
-<h3>Leadership &amp; Involvement</h3>
-<p><span class="todo">TODO: Clubs, organizations, volunteering, and co-curricular programs.</span></p>
-</div>
-</div>
-</section>
+<p class="pdf-fallback">Resume not showing? Some phones and browsers can't display PDFs inside a page. <a href="resume.pdf" target="_blank" rel="noopener">Open the resume PDF</a> or <a href="resume.pdf" download>download it</a>.</p>
 </div>
 </main>
 
