@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resume | YOUR NAME ePortfolio</title>
-<meta name="description" content="Resume of YOUR NAME, Computer Engineering student at Georgia Tech.">
+<meta name="description" content="Resume, projects, and experience of YOUR NAME, Computer Engineering student at Georgia Tech.">
 <meta name="theme-color" content="#001a33">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +22,9 @@
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Open menu</span></button>
 <nav id="site-nav" class="site-nav" aria-label="Main">
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="discovery.html">Discovery</a>
-<a href="roadmap.html">Roadmap</a>
-<a href="pitch.html">Pitch</a>
 <a class="active" aria-current="page" href="resume.html">Resume</a>
-<a href="experience.html">Experience</a>
-<a href="reflection.html">Reflection</a>
 <a href="contact.html">Contact</a>
 </nav>
 </div>
@@ -46,16 +43,60 @@
 </header>
 
 <div class="wrap content">
-<p><span class="todo">TODO: Upload your resume to this repo as resume.pdf (exact name). The viewer below will then show it automatically.</span></p>
+<nav class="page-toc" aria-label="On this page">
+<span class="page-toc-label">On this page</span>
+<a href="#viewer">Resume</a>
+<a href="#highlights">Highlights</a>
+<a href="#experience">Experience</a>
+</nav>
 
+<section class="section" id="viewer" aria-label="Resume viewer">
+<p><span class="todo">TODO: Upload your resume to this repo as resume.pdf (exact name). The viewer below will then show it automatically.</span></p>
 <div class="pdf-frame">
 <div class="pdf-frame-bar" aria-hidden="true">resume.pdf</div>
 <iframe src="resume.pdf" width="100%" height="900" title="Resume PDF"></iframe>
 </div>
+</section>
 
-<section class="section">
+<section class="section" id="highlights">
 <h2>Resume Highlights</h2>
 <p><span class="todo">TODO: 3 to 5 sentences calling out your most important experiences and skills, and what you changed during the Polished Resume assignment.</span></p>
+</section>
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+<h2 id="experience-title">Experience &amp; Involvement</h2>
+<p>This section grows as I do. Copy any card below to add a new entry.</p>
+
+<div class="subsection">
+<h3>Projects</h3>
+<p><span class="todo">TODO: Add one card per project you want to show off (class, club, or personal). Lead with your strongest one.</span></p>
+<!-- To add a project, copy everything from <article ...> to </article>. -->
+<article class="card project-card">
+<div class="project-media">
+<img src="images/project-placeholder.svg" alt="Project screenshot" width="640" height="400">
+</div>
+<div>
+<h4><span class="todo">TODO: Project name</span></h4>
+<p><span class="todo">TODO: What it is, what you built, tools used, what you learned.</span></p>
+<p class="project-links"><a class="btn btn-sm" href="#">Live demo</a> <a class="btn btn-sm btn-ghost" href="#">Code on GitHub</a></p>
+</div>
+</article>
+</div>
+
+<div class="grid-3 subsection">
+<div class="card exp-card">
+<h3>Coursework</h3>
+<p><span class="todo">TODO: Courses so far that connect to your goals, and what you learned from each.</span></p>
+</div>
+<div class="card exp-card">
+<h3>Work Experience</h3>
+<p><span class="todo">TODO: Jobs, internships, or research. Role, dates, and what you accomplished.</span></p>
+</div>
+<div class="card exp-card">
+<h3>Leadership &amp; Involvement</h3>
+<p><span class="todo">TODO: Clubs, organizations, volunteering, and co-curricular programs.</span></p>
+</div>
+</div>
 </section>
 </div>
 </main>

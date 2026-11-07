@@ -14,13 +14,10 @@ Then open http://localhost:8000.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home: hero, About Me, links to every section |
-| `discovery.html` | Individual Discovery: strengths, values, interests |
-| `roadmap.html` | ECE Roadmap: timeline, course plan, skills gap, career goals |
-| `pitch.html` | Elevator pitch (with an optional 16:9 video embed box) |
-| `resume.html` | Resume viewer and download (expects `resume.pdf` in the repo root) |
-| `experience.html` | Projects, coursework, work, leadership |
-| `reflection.html` | Where I've been / am / am going |
+| `index.html` | Home: hero, short About Me, links to every page and section |
+| `about.html` | Elevator pitch (with optional 16:9 video box), career goals, ECE roadmap (timeline, course plan, skills gap), reflection |
+| `discovery.html` | Individual Discovery Project: strengths, values, interests, takeaways, personal brand |
+| `resume.html` | Resume viewer and download (expects `resume.pdf` in the repo root), highlights, and experience (projects, coursework, work, leadership) |
 | `contact.html` | Email, LinkedIn, GitHub |
 | `style.css` | All styling. Colors, fonts and spacing are variables at the top (`:root`); dark mode is under `prefers-color-scheme: dark` |
 | `script.js` | Mobile hamburger menu and header shadow. The site works without it |
@@ -39,8 +36,9 @@ The SVGs in the repo root are the original placeholders. The pages use the copie
 
 - **Photos:** replace `images/headshot.svg` with a square photo (or point the `<img>` at a `.jpg`). For a project screenshot, about 16:10 works well.
 - **Graphics:** open `images/skills-chart.svg` or `images/roadmap-timeline.svg` in a text editor and change the labels. Comments in each file explain what to edit.
-- **New project:** in `experience.html`, copy everything from `<article class="card project-card">` to `</article>`.
-- **New table row:** copy a `<tr>…</tr>` line in `roadmap.html`.
+- **New project:** in `resume.html`, copy everything from `<article class="card project-card">` to `</article>`.
+- **New table row:** copy a `<tr>…</tr>` line in the Course Plan or Skills Gap table in `about.html`.
 - **Skill level pills (optional):** in the Skills Gap table, `<span class="level level-1">Beginner</span>` (`level-2` = intermediate, `level-3` = strong).
-- **Video:** in `pitch.html`, paste the YouTube `<iframe>` inside `<div class="video-embed">` and delete the placeholder div.
+- **Video:** in `about.html`, paste the YouTube `<iframe>` inside `<div class="video-embed">` and delete the placeholder div.
+- **Section links:** `about.html` has anchors `#pitch`, `#goals`, `#roadmap`, `#reflection`; `resume.html` has `#viewer`, `#highlights`, `#experience`.
 - Keep all links relative (`page.html`, `images/x.svg`, no leading `/`) so the site works under a GitHub Pages subpath.

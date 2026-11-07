@@ -36,7 +36,7 @@
     });
 
     // Reset if the window grows past the mobile breakpoint
-    var wide = window.matchMedia("(min-width: 921px)");
+    var wide = window.matchMedia("(min-width: 721px)");
     var onWide = function (e) { if (e.matches) setOpen(false); };
     if (wide.addEventListener) wide.addEventListener("change", onWide);
     else if (wide.addListener) wide.addListener(onWide);
