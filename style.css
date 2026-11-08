@@ -1017,18 +1017,11 @@ figcaption {
   border-top: 4px solid var(--gold);
 }
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
   padding-top: var(--space-5);
   padding-bottom: var(--space-5);
+  text-align: center;
 }
 .footer-inner p { margin: 0; }
-.site-footer a { color: #e5d38f; text-decoration: none; }
-.site-footer a:hover { color: #fff; text-decoration: underline; }
-.site-footer :focus-visible { outline-color: #e5d38f; }
 
 /* ---------- 9. Utilities + motion ---------- */
 .sr-only {
@@ -1056,7 +1049,7 @@ figcaption {
 
 /* ---------- 10. Print ---------- */
 @media print {
-  .site-header, .nav-toggle, .skip-link, .site-footer a[href="#top"] { display: none; }
+  .site-header, .nav-toggle, .skip-link { display: none; }
   .hero, .page-hero { background: none; color: #000; }
   .hero h1, .page-hero h1, .hero .lede, .page-hero .lede { color: #000; }
   .card, figure { box-shadow: none; break-inside: avoid; }
