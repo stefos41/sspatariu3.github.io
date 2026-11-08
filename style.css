@@ -953,8 +953,7 @@ figcaption {
 }
 .step h4 { margin: .45rem 0 var(--space-2); }
 .step p { margin-bottom: var(--space-2); }
-.step-when { font-size: .92rem; color: var(--muted); margin-bottom: 0 !important; }
-.step-when strong { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+.step p:last-child { margin-bottom: 0; }
 
 /* Story arc (About > Biography): vertical numbered line */
 .journey { list-style: none; margin: var(--space-6) 0 0; padding: 0; position: relative; }

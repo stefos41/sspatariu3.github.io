@@ -43,7 +43,7 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 
 | File | Used on | Notes |
 | --- | --- | --- |
-| `images/headshot.svg` | Home hero | Placeholder: replace with a square photo |
+| `images/headshot.jpg` | Home hero | Square crop of Stefan's profile photo (800x800, metadata stripped) |
 | `images/glowbox-photo.jpg` | GlowBox, Overview | Still from Stefan's GlowBox video |
 | `images/glowbox-thumb.jpg` | Projects, GlowBox card | 16:10 crop of the same still |
 | `images/process-diagram.svg` | GlowBox, The Process | The six measurement steps from the GlowBox report |
