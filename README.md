@@ -51,14 +51,14 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 | `images/buzzstep-photo.jpg` | BuzzStep, Overview | Still from Stefan's BuzzStep video |
 | `images/buzzstep-thumb.jpg` | Projects, BuzzStep card | 16:10 crop of the same still |
 | `images/glowbox-video-poster.jpg` | GlowBox, Video | Poster frame for `videos/glowbox-demo.mp4` |
-| `videos/glowbox-demo.mp4` | GlowBox, Video | Web copy of IMG_1663 (positive reading), H.264/AAC 720x1280, metadata stripped |
-| `videos/buzzstep-demo.mp4` | BuzzStep, Video | Web copy of IMG_1378 (walking with BuzzStep), H.264/AAC 720x1280, metadata stripped |
+| `videos/glowbox-demo.mp4` | GlowBox, Video | Web copy of IMG_1663 (positive reading), H.264 720x1280, no audio track (muted), metadata stripped |
+| `videos/buzzstep-demo.mp4` | BuzzStep, Video | Web copy of IMG_1378 (walking with BuzzStep), H.264/AAC 720x1280 with sound, metadata stripped |
 | `images/buzzstep-video-poster.jpg` | BuzzStep, Video | Poster frame for `videos/buzzstep-demo.mp4` |
 
 `images/skills-chart.svg`, `images/project-placeholder.svg` and the SVGs in the repo root are older placeholders that no page uses any more; you can delete them.
 
 ## Editing tips
 
-- **Videos:** project videos live in `videos/` as H.264 MP4 (720px wide, metadata stripped) and play in a `<figure class="video-figure">` on each project page, with a poster image from `images/`. To swap in a YouTube video instead, replace the `<video>` element with YouTube's Share → Embed `<iframe>`.
+- **Videos:** project videos live in `videos/` as H.264 MP4 (720px wide, metadata stripped) and play in a `<figure class="video-figure">` on each project page, with a poster image from `images/`. The `?v=` on each video/poster address forces browsers to fetch a replaced file; change it whenever you replace a video. To swap in a YouTube video instead, replace the `<video>` element with YouTube's Share → Embed `<iframe>`.
 - **Section links:** `about.html#bio`, `#pitch`, `#goals`; `discovery.html` and `project-2.html` both have `#overview`, `#problem`, `#process`, `#outcome`, `#learned`, `#video`.
 - Keep all links relative (`page.html`, `images/x.jpg`, no leading `/`) so the site works under a GitHub Pages subpath.
