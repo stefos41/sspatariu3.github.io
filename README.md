@@ -31,7 +31,6 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 ## Finishing the content
 
 - Search the project for `TODO`. Every unfinished spot is wrapped in `<span class="todo">…</span>` and highlighted yellow. Delete the span once you've written the real text.
-- The Home brand statement and welcome paragraph are marked `DRAFT` in HTML comments until approved.
 
 ## Adding a project
 
