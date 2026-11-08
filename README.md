@@ -19,10 +19,10 @@ Then open http://localhost:8000. (Use `python3` or `py` if `python` isn't found.
 | `projects.html` | Project card grid: GlowBox (Featured Discovery Project) + BuzzStep | Step 2.5 Technical projects |
 | `discovery.html` | GlowBox, the Discovery Project Feature: Overview, The Problem, The Process, The Outcome, What I Learned, optional Video | Step 2.5 Discovery Project Feature |
 | `project-2.html` | BuzzStep, same layout as the Discovery Feature | Step 2.5 Technical projects |
-| `resume.html` | Embedded `resume.pdf` with Download button and mobile fallback link | Step 2.3 Resume |
+| `resume.html` | Embedded `Stefan_Spatariu_resume.pdf` with Download button and mobile fallback link | Step 2.3 Resume |
 | `contact.html` | Email, LinkedIn, GitHub | Step 3 Contact |
 
-Other files: `style.css` (all styling; colors, fonts and spacing are variables at the top, dark mode under `prefers-color-scheme: dark`), `script.js` (mobile menu and header shadow; the site works without it), `favicon.svg`, `resume.pdf`, and `images/`.
+Other files: `style.css` (all styling; colors, fonts and spacing are variables at the top, dark mode under `prefers-color-scheme: dark`), `script.js` (mobile menu and header shadow; the site works without it), `favicon.svg`, `Stefan_Spatariu_resume.pdf`, and `images/`.
 
 ## Private materials
 
