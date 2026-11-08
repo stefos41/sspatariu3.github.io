@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-labelledby="t d">
   <title id="t">GlowBox test strip results</title>
   <desc id="d">Absorbance of four test strips on a log scale, with the positive cut-off at 0.0126. Blank paper 0.006 (NEG); red marker line 0.110 (POS); faint marker line 0.232 (POS); dark blue/black marker line 0.693 (POS). Source: GlowBox report, device log files, 6 to 7 November 2026.</desc>
-  <!-- Data from "GlowBox: A Low-Cost Reader for Colorimetric Test Strips", Results > Test strips.
+  <!-- Data from "GlowBox: An Embedded Reader for Colorimetric Test Strips", Results > Test strips.
        x position = 230 + 223.333 * log10(value / 0.001)  (0.001 at x=230, 1 at x=900). -->
   <style>
     .bg { fill: #ffffff; }

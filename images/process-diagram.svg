@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" aria-labelledby="t d">
   <title id="t">How a GlowBox reading works</title>
   <desc id="d">One button press, about 2 seconds: 1 photo with LEDs off, which measures any stray light; 2 photo with red LEDs on, and the LEDs switch off right after; 3 find the strip and line in any position or direction; 4 compare the line with the paper, which gives the absorbance; 5 check whether it is above the threshold set by 10 blank strips; 6 the LCD shows POS or NEG and saves the reading.</desc>
-  <!-- Steps taken from "GlowBox: A Low-Cost Reader for Colorimetric Test Strips",
+  <!-- Steps taken from "GlowBox: An Embedded Reader for Colorimetric Test Strips",
        section 2, "From a press of the button to a result". -->
   <style>
     .bg { fill: #ffffff; }
