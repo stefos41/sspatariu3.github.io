@@ -35,8 +35,8 @@
 <div class="wrap">
 <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><span aria-current="page">BuzzStep</span></li></ol></nav>
 <p class="eyebrow">Technical Project</p>
-<h1><span class="todo">TODO: Project title</span></h1>
-<p class="lede"><span class="todo">TODO: One-sentence hook: the problem in a nutshell and what you made.</span></p>
+<h1>BuzzStep</h1>
+<p class="lede">A wearable rehabilitation device that gives patients real-time feedback on foot clearance, with no physical hurdles to trip over.</p>
 </div>
 </header>
 
@@ -58,44 +58,45 @@
 <h2 id="overview-title">Overview</h2>
 <div class="overview-grid">
 <div>
-<p>We built this project for the Medical Robotics club to address tripping hazards and foot imbalances that occur when walking and during the stages of rehabilitation. The device lets the user set a target clearance height and then walk. When the foot reaches that height, the device beeps.</p>
+<p>BuzzStep is a wearable gait rehabilitation device that replaces physical hurdles with sensor-based virtual targets. We built it for the Medical Robotics club to address tripping hazards and foot imbalances that occur when walking and during the stages of rehabilitation. The user sets a target clearance height and then walks. When the foot reaches that height, the device beeps.</p>
 </div>
 <dl class="facts" aria-label="Project at a glance">
 <div><dt>Club</dt><dd>Medical Robotics</dd></div>
-<div><dt>Timeline</dt><dd><span class="todo">TODO</span></dd></div>
+<div><dt>Timeline</dt><dd>Spring 2026</dd></div>
 <div><dt>Team</dt><dd>Team of 4</dd></div>
 <div><dt>My Role</dt><dd>Team Lead</dd></div>
-<div><dt>Tools</dt><dd><span class="todo">TODO</span></dd></div>
+<div><dt>Tools</dt><dd>Arduino, ultrasonic sensor, potentiometer, speaker, breadboard, LCD</dd></div>
 </dl>
 </div>
 <figure class="figure-portrait">
 <img src="images/buzzstep-photo.jpg" alt="BuzzStep worn on a lower leg: a breadboard with wiring strapped to the calf, with wires running down to a yellow attachment fixed to a black sneaker. The foot is lifted next to a tape measure held against a wooden post." width="900" height="1600">
-<figcaption>This shows how the Buzzstep works. The user sets a height limit with the potentiometer knob, then lifts their foot until the device beeps, which signals that the target height has been reached.</figcaption>
+<figcaption>BuzzStep in use: the user sets a height limit with the potentiometer knob, then lifts their foot until the device beeps, signaling that the target height has been reached.</figcaption>
 </figure>
 </section>
 
 <!-- ============ The Problem ============ -->
 <section class="section" id="problem" aria-labelledby="problem-title">
 <h2 id="problem-title"><span class="section-kicker" aria-hidden="true">01</span>The Problem</h2>
-<p><span class="todo">TODO: What problem did this project address? Who is it for, why it matters, and what constraints you worked within.</span></p>
+<p>Drop foot limits a patient&rsquo;s ability to lift the front of the foot, which increases fall risk and impairs gait. Existing rehabilitation methods fall short in three ways: physical obstacles create tripping hazards, they offer no quantitative measurement of foot clearance, and patients receive little real-time feedback.</p>
 </section>
 
 <!-- ============ The Process ============ -->
 <section class="section" id="process" aria-labelledby="process-title">
 <h2 id="process-title"><span class="section-kicker" aria-hidden="true">02</span>The Process</h2>
-<p>We needed to design a support that holds the sensor parallel to the ground. The sensor can only measure height when it detects the signal it emits, and that happens only when the signal strikes the surface perpendicularly. As we continued testing, we calibrated the knob so that it was neither too sensitive nor too dull, which allows the height to be adjusted to the exact measurement the user wants.</p>
+<p>Our first design sketch placed an Arduino and a breadboard on the calf, secured with velcro and wired to a device containing ultrasonic sensors that clipped onto the shoe. We then modeled the design in 3D and built a prototype worn on the shoe.</p>
+<p>We needed to design a support that holds the sensor parallel to the ground, because the sensor can only measure height when it detects the signal it emits, which happens only when the signal strikes the surface perpendicularly. As we continued testing, we calibrated the knob so that it was neither too sensitive nor too unresponsive, allowing the height to be adjusted to the exact measurement the user wants.</p>
 </section>
 
 <!-- ============ The Outcome ============ -->
 <section class="section" id="outcome" aria-labelledby="outcome-title">
 <h2 id="outcome-title"><span class="section-kicker" aria-hidden="true">03</span>The Outcome</h2>
-<p>In the end, we produced a wearable gait rehabilitation device that replaces physical hurdles with sensor-based virtual targets. The sensor is very sensitive to the angle of projection, which strongly affects the accuracy of the reading when the foot is lifted. If we were to improve the design, we would create a better attachment point for the sensor. The curved shape of the foot makes it hard to keep the sensor parallel to the ground, so a mount that sits more parallel to the ground would improve accuracy.</p>
+<p>In the end, we built a working prototype of BuzzStep, a wearable device that replaces physical hurdles with sensor-based virtual targets. The sensor is very sensitive to the angle of projection, which strongly affects the accuracy of the reading when the foot is lifted. The curved shape of the foot makes it hard to keep the sensor parallel to the ground, so in a future version we would design a better attachment point that sits more parallel to the ground to improve accuracy.</p>
 </section>
 
 <!-- ============ What I Learned ============ -->
 <section class="section callout" id="learned" aria-labelledby="learned-title">
 <h2 id="learned-title">What I Learned</h2>
-<p>I learned how to take an idea from ideation to a working prototype in a matter of months, which will help me carry assigned projects in industry from start to finish. I also expanded my knowledge of different sensors and of how much a microcontroller can do, which has broadened my perspective on what is possible in the space of ideation.</p>
+<p>Taking BuzzStep from idea to working prototype in a matter of months taught me how to carry a project from start to finish, a skill I can apply to assigned projects in industry. I also deepened my knowledge of sensors and learned how much a microcontroller can do, which has broadened my sense of what is possible when developing new ideas.</p>
 </section>
 
 <!-- ============ Video (optional) ============ -->
