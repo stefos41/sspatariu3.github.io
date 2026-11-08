@@ -186,7 +186,7 @@ h4 { font-size: 1.15rem; font-weight: 600; }
 .page-toc-label {
   margin-right: var(--space-2);
   font-family: var(--font-mono);
-  font-size: .75rem;
+  font-size: .8125rem;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -449,7 +449,7 @@ h4 { font-size: 1.15rem; font-weight: 600; }
   gap: var(--space-2);
   margin: 0 0 var(--space-3);
   font-family: var(--font-mono);
-  font-size: .8rem;
+  font-size: .8125rem;
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -613,7 +613,7 @@ h4 { font-size: 1.15rem; font-weight: 600; }
   background: var(--surface-2);
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: .72rem;
+  font-size: .8125rem;
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -629,7 +629,7 @@ h4 { font-size: 1.15rem; font-weight: 600; }
   background: var(--surface-2);
   border: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: .8rem;
+  font-size: .8125rem;
   color: var(--text);
 }
 .tags li:has(.todo) { padding: 0; background: none; border: 0; }
@@ -841,7 +841,7 @@ figcaption {
   border-bottom: 1px solid var(--border);
 }
 .facts > div:last-child { border-bottom: 0; }
-.facts dt { font-family: var(--font-mono); font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: .2rem; }
+.facts dt { font-family: var(--font-mono); font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: .2rem; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .facts-link { font-weight: 600; overflow-wrap: anywhere; }
 @media (max-width: 420px) {
@@ -860,7 +860,7 @@ figcaption {
   background: var(--navy);
   color: #e5d38f;
   font-family: var(--font-mono);
-  font-size: .5em;
+  font-size: max(.8125rem, .5em);
   letter-spacing: 0;
 }
 .feature-footer { margin-top: var(--space-7); }
@@ -880,7 +880,11 @@ figcaption {
   border-left: 4px solid var(--gold);
   border-radius: var(--radius-sm);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+/* beat `.content p { max-width: 72ch }` so the box never gets wider than the screen;
+   a long formula scrolls inside the box instead of scrolling the whole page */
+.content .formula { max-width: 100%; box-sizing: border-box; }
 .formula code { font-family: var(--font-mono); font-size: 1rem; color: var(--heading); white-space: nowrap; }
 .goal-line { padding-left: var(--space-4); border-left: 4px solid var(--gold); font-size: 1.08rem; }
 
@@ -908,7 +912,7 @@ figcaption {
   background: var(--navy);
   color: #e5d38f;
   font-family: var(--font-mono);
-  font-size: .8rem;
+  font-size: .8125rem;
   font-weight: 700;
 }
 .problem-list strong { color: var(--heading); }
@@ -1002,7 +1006,7 @@ figcaption {
 .contact-item strong {
   display: block;
   font-family: var(--font-mono);
-  font-size: .78rem;
+  font-size: .8125rem;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--muted);

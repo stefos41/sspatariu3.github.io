@@ -83,10 +83,10 @@
 <!-- ============ The Process ============ -->
 <section class="section" id="process" aria-labelledby="process-title">
 <h2 id="process-title"><span class="section-kicker" aria-hidden="true">02</span>The Process</h2>
-<p>The idea fits in one sentence: a coloured line soaks up light, so under the right light it looks darker than the paper around it, and how much darker tells you how much dye is there. GlowBox uses red light (650&nbsp;nm), which blue, purple and black lines absorb strongly, and compares the line with the clean paper right next to it in the same photo:</p>
+<p>The idea fits in one sentence: a colored line soaks up light, so under the right light it looks darker than the paper around it, and how much darker tells you how much dye is there. GlowBox uses red light (650&nbsp;nm), which blue, purple and black lines absorb strongly, and compares the line with the clean paper right next to it in the same photo:</p>
 <p class="formula"><code>absorbance = &minus;log<sub>10</sub>(line brightness &divide; paper brightness)</code></p>
 <p>If the line reflects the same light as the paper, absorbance is 0. If it reflects half as much, absorbance is about 0.3. The darker the line, the bigger the number.</p>
-<p>GlowBox is a cardboard enclosure with two compartments: a dark measuring chamber on one side and the electronics on the other. A Raspberry Pi 4 runs the camera, does the maths and drives the display; a Raspberry Pi Camera Module 3 photographs the strip from about 15&nbsp;cm above; a 650&nbsp;nm red LED, diffused with paper, lights the strip from the side; and an IRLZ44N transistor lets the Pi switch the LED on and off. About 1,400 lines of Python start automatically when the device is powered on. An older Raspberry Pi 1 was used first as a test bench, so a wiring mistake could only damage the old board.</p>
+<p>GlowBox is a cardboard enclosure with two compartments: a dark measuring chamber on one side and the electronics on the other. A Raspberry Pi 4 runs the camera, does the math and drives the display; a Raspberry Pi Camera Module 3 photographs the strip from about 15&nbsp;cm above; a 650&nbsp;nm red LED, diffused with paper, lights the strip from the side; and an IRLZ44N transistor lets the Pi switch the LED on and off. About 1,400 lines of Python start automatically when the device is powered on. An older Raspberry Pi 1 was used first as a test bench, so a wiring mistake could only damage the old board.</p>
 
 <figure>
 <img src="images/process-diagram.svg" alt="Six-step diagram of a GlowBox reading: photo with LEDs off, photo with red LEDs on, find the strip and line, compare line with paper, check whether it is above the threshold, then the LCD shows POS or NEG and saves the reading." width="1000" height="400">
@@ -114,7 +114,7 @@
 <img src="images/results-chart.svg" alt="Bar chart of absorbance on a log scale with a cut-off line at 0.0126: blank paper 0.006 (NEG), red marker line 0.110 (POS), faint marker line 0.232 (POS), dark blue/black marker line 0.693 (POS)." width="1000" height="380">
 <figcaption>Test strips, from the device's own log files. Red ink still absorbs some deep red light, so it reads POS, but about 6&times; weaker than the blue/black line: red light suits blue or dark labels best.</figcaption>
 </figure>
-<p>GlowBox is a prototype measurement tool. I tested marker lines, not real test strips; it reads one line, while real strips have a test line and a control line; and red light barely sees the red/pink lines many commercial tests use. Next steps, in order: a test/control line mode, green LEDs for red/pink-line strips, a dilution series to map the detection limit, real commercial strips with known amounts of bacteria, and a sturdier enclosure.</p>
+<p>GlowBox is a prototype measurement tool, not a medical device. I tested marker lines, not real test strips; it reads one line, while real strips have a test line and a control line; and red light barely sees the red/pink lines many commercial tests use. Next steps, in order: a test/control line mode, green LEDs for red/pink-line strips, a dilution series to map the detection limit, real commercial strips with known amounts of bacteria, and a sturdier enclosure.</p>
 </section>
 
 <!-- ============ What I Learned ============ -->

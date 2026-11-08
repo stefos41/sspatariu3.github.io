@@ -55,7 +55,7 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 | `videos/buzzstep-demo.mp4` | BuzzStep, Video | Web copy of "MedRobotics Video.mov" (static and live demonstrations), H.264/AAC 360x640 with sound, metadata stripped |
 | `images/buzzstep-video-poster.jpg` | BuzzStep, Video | Poster frame for `videos/buzzstep-demo.mp4` |
 
-`images/skills-chart.svg`, `images/project-placeholder.svg` and the SVGs in the repo root are older placeholders that no page uses any more; you can delete them.
+
 
 ## Editing tips
 
