@@ -52,7 +52,7 @@ Other files: `style.css` (all styling; colors, fonts and spacing are variables a
 | `images/buzzstep-thumb.jpg` | Projects, BuzzStep card | 16:10 crop of the same still |
 | `images/glowbox-video-poster.jpg` | GlowBox, Video | Poster frame for `videos/glowbox-demo.mp4` |
 | `videos/glowbox-demo.mp4` | GlowBox, Video | Web copy of IMG_1663 (positive reading), H.264 720x1280, no audio track (muted), metadata stripped |
-| `videos/buzzstep-demo.mp4` | BuzzStep, Video | Web copy of IMG_1378 (walking with BuzzStep), H.264/AAC 720x1280 with sound, metadata stripped |
+| `videos/buzzstep-demo.mp4` | BuzzStep, Video | Web copy of "MedRobotics Video.mov" (static and live demonstrations), H.264/AAC 360x640 with sound, metadata stripped |
 | `images/buzzstep-video-poster.jpg` | BuzzStep, Video | Poster frame for `videos/buzzstep-demo.mp4` |
 
 `images/skills-chart.svg`, `images/project-placeholder.svg` and the SVGs in the repo root are older placeholders that no page uses any more; you can delete them.

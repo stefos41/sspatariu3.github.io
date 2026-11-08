@@ -35,8 +35,8 @@
 <div class="wrap">
 <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><span aria-current="page">BuzzStep</span></li></ol></nav>
 <p class="eyebrow">Technical Project</p>
-<h1>BuzzStep</h1>
-<p class="lede">An innovative step towards movement rehabilitation.</p>
+<h1><span class="todo">TODO: Project title</span></h1>
+<p class="lede"><span class="todo">TODO: One-sentence hook: the problem in a nutshell and what you made.</span></p>
 </div>
 </header>
 
@@ -58,57 +58,55 @@
 <h2 id="overview-title">Overview</h2>
 <div class="overview-grid">
 <div>
-<p>BuzzStep is a wearable gait rehabilitation device that replaces physical hurdles with sensor-based virtual targets.</p>
-<p><span class="todo">TODO: Why you built it (class, club, or personal) and the headline result, in plain language for a non-expert reader.</span></p>
+<p>We built this project for the Medical Robotics club to address tripping hazards and foot imbalances that occur when walking and during the stages of rehabilitation. The device lets the user set a target clearance height and then walk. When the foot reaches that height, the device beeps.</p>
 </div>
 <dl class="facts" aria-label="Project at a glance">
-<div><dt>Course / Program</dt><dd><span class="todo">TODO</span></dd></div>
-<div><dt>Timeline</dt><dd>Spring 2026</dd></div>
-<div><dt>Team</dt><dd><span class="todo">TODO: Solo or team of N</span></dd></div>
-<div><dt>My Role</dt><dd><span class="todo">TODO</span></dd></div>
-<div><dt>Tools</dt><dd>Arduino, ultrasonic sensors, breadboard, LCD</dd></div>
+<div><dt>Club</dt><dd>Medical Robotics</dd></div>
+<div><dt>Timeline</dt><dd><span class="todo">TODO</span></dd></div>
+<div><dt>Team</dt><dd>Team of 4</dd></div>
+<div><dt>My Role</dt><dd>Team Lead</dd></div>
+<div><dt>Tools</dt><dd><span class="todo">TODO</span></dd></div>
 </dl>
 </div>
 <figure class="figure-portrait">
 <img src="images/buzzstep-photo.jpg" alt="BuzzStep worn on a lower leg: a breadboard with wiring strapped to the calf, with wires running down to a yellow attachment fixed to a black sneaker. The foot is lifted next to a tape measure held against a wooden post." width="900" height="1600">
-<figcaption><span class="todo">TODO: Caption for this photo (what it shows and when it was taken).</span></figcaption>
+<figcaption>This shows how the Buzzstep works. The user sets a height limit with the potentiometer knob, then lifts their foot until the device beeps, which signals that the target height has been reached.</figcaption>
 </figure>
 </section>
 
 <!-- ============ The Problem ============ -->
 <section class="section" id="problem" aria-labelledby="problem-title">
 <h2 id="problem-title"><span class="section-kicker" aria-hidden="true">01</span>The Problem</h2>
-<p>Drop-foot limits a patient's ability to lift the front of the foot, increasing fall risk and impairing gait. Existing rehabilitation methods have limitations: physical obstacles create tripping hazards, there is no quantitative measurement of foot clearance, and patients get limited real-time feedback.</p>
+<p><span class="todo">TODO: What problem did this project address? Who is it for, why it matters, and what constraints you worked within.</span></p>
 </section>
 
 <!-- ============ The Process ============ -->
 <section class="section" id="process" aria-labelledby="process-title">
 <h2 id="process-title"><span class="section-kicker" aria-hidden="true">02</span>The Process</h2>
-<p>The first design sketch places an Arduino and a breadboard on the calf, held on with velcro, wired to a device with ultrasonic sensors that is clipped onto the shoe. From there the design was modeled in 3D and built into a prototype worn on the shoe.</p>
-<p><span class="todo">TODO: Explain your design decisions, how the virtual targets and feedback work, what you tested, and what changed between versions.</span></p>
+<p>We needed to design a support that holds the sensor parallel to the ground. The sensor can only measure height when it detects the signal it emits, and that happens only when the signal strikes the surface perpendicularly. As we continued testing, we calibrated the knob so that it was neither too sensitive nor too dull, which allows the height to be adjusted to the exact measurement the user wants.</p>
 </section>
 
 <!-- ============ The Outcome ============ -->
 <section class="section" id="outcome" aria-labelledby="outcome-title">
 <h2 id="outcome-title"><span class="section-kicker" aria-hidden="true">03</span>The Outcome</h2>
-<p><span class="todo">TODO: What you produced and how well it worked. Include measurable results where you can, and what you'd improve.</span></p>
+<p>In the end, we produced a wearable gait rehabilitation device that replaces physical hurdles with sensor-based virtual targets. The sensor is very sensitive to the angle of projection, which strongly affects the accuracy of the reading when the foot is lifted. If we were to improve the design, we would create a better attachment point for the sensor. The curved shape of the foot makes it hard to keep the sensor parallel to the ground, so a mount that sits more parallel to the ground would improve accuracy.</p>
 </section>
 
 <!-- ============ What I Learned ============ -->
 <section class="section callout" id="learned" aria-labelledby="learned-title">
 <h2 id="learned-title">What I Learned</h2>
-<p><span class="todo">TODO: Key technical and personal takeaways, and how this project connects to your career goals.</span></p>
+<p>I learned how to take an idea from ideation to a working prototype in a matter of months, which will help me carry assigned projects in industry from start to finish. I also expanded my knowledge of different sensors and of how much a microcontroller can do, which has broadened my perspective on what is possible in the space of ideation.</p>
 </section>
 
 <!-- ============ Video (optional) ============ -->
 <section class="section" id="video" aria-labelledby="video-title">
 <h2 id="video-title">Video</h2>
 <figure class="video-figure">
-<video controls playsinline preload="metadata" poster="images/buzzstep-video-poster.jpg?v=1378" width="720" height="1280" aria-label="Video of BuzzStep worn while walking across a tiled floor: a board with an LCD and wiring is strapped to the calf, and a yellow attachment is fixed to the shoe.">
-<source src="videos/buzzstep-demo.mp4?v=1378" type="video/mp4">
-<p>Your browser can't play this video. <a href="videos/buzzstep-demo.mp4?v=1378">Download the BuzzStep video (MP4, 4.7&nbsp;MB)</a>.</p>
+<video controls playsinline preload="metadata" poster="images/buzzstep-video-poster.jpg?v=medrobotics" width="360" height="640" aria-label="Video of the Buzzstep: a static demonstration with a close-up of the LCD on the calf and the foot lifted next to a tape measure, then a live demonstration of walking with the device.">
+<source src="videos/buzzstep-demo.mp4?v=medrobotics" type="video/mp4">
+<p>Your browser can't play this video. <a href="videos/buzzstep-demo.mp4?v=medrobotics">Download the Buzzstep video (MP4, 3.1&nbsp;MB)</a>.</p>
 </video>
-<figcaption>BuzzStep worn while walking: the board is strapped to the calf, and the yellow attachment with the ultrasonic sensors is clipped onto the shoe.</figcaption>
+<figcaption>This shows a static demonstration of the Buzzstep, with the foot lifted next to a tape measure, followed by a live demonstration of walking with the device.</figcaption>
 </figure>
 </section>
 
